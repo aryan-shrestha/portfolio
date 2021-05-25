@@ -7,6 +7,11 @@ html {
   scroll-behavior: smooth;
 }
 
+@font-face {
+  font-family: 'Baron Neue';
+  src: url("./fonts/Baron Neue Bold.ttf");
+}
+
 /* ---------- loader ------------*/
 .loader {
   position: fixed;
@@ -66,9 +71,9 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: -webkit-sticky;
-  position: sticky;
+  position: fixed;
   top: 0;
+  z-index: 3;
 }
 
 nav h1 {
@@ -129,11 +134,11 @@ nav h1 {
   font-size: 48px;
   text-decoration: none;
   color: #E5E5E5;
-  font-family: Baron Neue;
+  font-family: 'Baron Neue';
 }
 
 .menu-content p {
-  font-family: Baron Neue;
+  font-family: 'Baron Neue';
   color: #e5e5e5;
 }
 
@@ -152,7 +157,7 @@ nav h1 {
 
 .show-menu {
   opacity: 1;
-  z-index: 3;
+  z-index: 4;
   pointer-events: all;
 }
 
