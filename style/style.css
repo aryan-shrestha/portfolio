@@ -12,8 +12,7 @@ html {
   position: fixed;
   top: 0;
   left: 0;
-  background: -webkit-gradient(linear, left top, right top, from(#101011), color-stop(50%, #101011), color-stop(50%, #151617), to(#151617));
-  background: linear-gradient(to right, #101011 0%, #101011 50%, #151617 50%, #151617 100%);
+  background: black;
   height: 100vh;
   width: 100%;
   display: -webkit-box;
@@ -337,6 +336,7 @@ nav h1 {
     width: 20%;
   }
   .arrow {
+    bottom: 8%;
     left: 45%;
   }
   .hero-text-container h3 {
