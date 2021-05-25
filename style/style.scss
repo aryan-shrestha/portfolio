@@ -1,0 +1,291 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* ---------- loader ------------*/
+.loader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background:linear-gradient(
+        to right,
+        #101011 0%,
+        #101011 50%,
+        #151617 50%,
+        #151617 100%
+    );
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.disappear{
+    animation: vanish 1s forwards;
+}
+
+@keyframes vanish {
+    100%{
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+/* -------------- loader end ----------- */
+
+/* -------------- background ------------*/
+body{
+    background:linear-gradient(
+        to right,
+        #101011 0%,
+        #101011 50%,
+        #151617 50%,
+        #151617 100%
+    );
+}
+
+
+/*--------------- nav bar start ---------*/ 
+nav{
+    width: 95%;
+    height: 10vh;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    h1{
+        font-family: 'Plaster', cursive;
+        font-size: 36px;
+        color: #E5E5E5;
+    }
+}
+
+.menu{
+    width: 6%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #E5E5E5;
+    font-family: 'Baron Neue';
+    cursor: pointer;
+    
+    p{
+        font-size: 15px;
+        
+    }
+    i{
+        font-size: 24px;
+    }
+}
+
+.menu-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100vh;
+    width: 100%;
+    padding-left: 2%;
+    background: #151617f8;
+    position:fixed;
+    top: 0;
+    z-index: -1;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease-in-out;
+    
+    a{
+        font-size: 48px;
+        text-decoration: none;
+        color:#E5E5E5;
+        font-family: Baron Neue;
+    }
+    p{
+        font-family: Baron Neue;
+        color: #e5e5e5;
+    }
+    i{
+        color: #e5e5e5;
+        font-size: 30px;
+        position: absolute;
+        top: 3%;
+        right: 5%;
+        cursor: pointer;
+    }
+    a:hover,i:hover{
+        color: #988345;
+    }
+
+}
+
+.show-menu{
+    opacity: 1;
+    z-index: 3;
+    pointer-events: all;
+}
+
+/* ------------ nav bar end ---------------*/
+
+.main-container{
+    height: 90vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.hero-text-container{
+    margin: auto;
+    width: 95%; 
+    height: 60%;
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    
+    h3{
+        font-family: Baron Neue;
+        font-size: 64px;
+        color: #988345;
+        text-align: center;
+    }
+    h5{
+        font-family: Baron Neue;
+        font-size: 24px;
+        color: #E5E5E5;
+        letter-spacing: 0.2em;
+    }
+}
+
+.arrow{
+    position: absolute;
+    bottom: 5%;
+    left: 48.3%;
+    cursor: pointer;
+    animation: motion 1s ;
+}
+
+
+@keyframes motion{
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(10px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+/* ----------- cards -----------*/
+
+.card{
+    width: 280px;
+    height: 360px;
+    padding: 2rem 1rem;
+    background: #fff;
+    display: flex;
+    align-items: flex-end;
+    transition:0.3s ease-in-out;
+    position:relative;
+}
+
+.card:hover{
+    transform: translateY(-10px);
+}
+.card:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left:0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background:  rgba(16, 16, 17, 0.685);
+    z-index: 2;
+    transition: 0.5s  all;
+    opacity: 1;
+}
+.card:hover:before{
+    background:  linear-gradient(to bottom, rgba(255, 255, 255, 0.315), rgba(16, 16, 17, 0.8));
+    opacity: 1;
+    cursor: pointer;
+}
+.card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top:0;
+    left: 0;
+}
+
+.card .info{
+   position:relative;
+   z-index: 3;
+   color: #fff;
+   opacity: 0;
+   transform: translateY(30px); 
+   transition: 0.5s all;
+}
+.card:hover .info{
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.info{
+    p{
+        color: #E5E5E5;
+        font-size: 20px;
+        font-family: Baron Neue;
+    }
+    a{
+        margin-top: 10px;
+        display: inline-block;
+        color: #E5E5E5;
+        font-family: Baron Neue;
+        font-size: 15px;
+        padding: 15px 20px;
+        background: #988345;
+        text-decoration: none;
+        border-radius: 15px;
+    }
+}
+
+@media screen and (max-width: 450px){
+    .menu{
+        width: 20%;
+    }
+    .arrow{
+        left:45%
+    }
+    .hero-text-container{       
+        h3{
+            font-family: Baron Neue;
+            font-size: 54px;
+            color: #988345;
+            text-align: center;
+        }
+        h5{
+            font-family: Baron Neue;
+            font-size: 20px;
+            color: #E5E5E5;
+            letter-spacing: 0.2em;
+        }
+    }
+    hr{
+        width: 10%;
+        height: 3px;
+    }
+}
