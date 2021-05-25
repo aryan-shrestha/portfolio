@@ -73,6 +73,7 @@ nav {
           align-items: center;
   position: fixed;
   top: 0;
+  left: 2.5%;
   z-index: 3;
 }
 
@@ -277,7 +278,7 @@ nav h1 {
   display: block;
   width: 100%;
   height: 100%;
-  background: rgba(16, 16, 17, 0.685);
+  background: rgba(16, 16, 17, 0.322);
   z-index: 2;
   -webkit-transition: 0.5s  all;
   transition: 0.5s  all;
