@@ -190,7 +190,7 @@ nav h1 {
 }
 
 .hero-text-container h3 {
-  font-family: Baron Neue;
+  font-family: 'Baron Neue', sans-serif;
   font-size: 64px;
   color: #988345;
   text-align: center;
@@ -336,7 +336,7 @@ nav h1 {
     width: 20%;
   }
   .arrow {
-    bottom: 8%;
+    bottom: 15%;
     left: 45%;
   }
   .hero-text-container h3 {
