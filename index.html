@@ -23,9 +23,9 @@
     </nav>
     <section class="menu-content">
         <i class="fas fa-times" id='closeBtn'></i>
-        <a href="#"><h3>Work</h3></a>
+        <a href="./index.html"><h3>Work</h3></a>
         <a href="#"><h3>About</h3></a>
-        <a href="#"><h3>Contact</h3></a>
+        <a href="./contact.html"><h3>Contact</h3></a>
         <p>© 2021 Aryan Shrestha.</p>
     </section>
     <section class="main-container">
@@ -69,5 +69,12 @@
 
     </section>
     <script src="./js/app.js"></script>
+    <script>
+        function arrowAnimation() {
+            document.querySelector('.arrow').style.animationIterationCount = "infinite";
+            console.log( document.getElementsByClassName('arrow'));
+        }
+        arrowAnimation()
+    </script>
 </body>
 </html>

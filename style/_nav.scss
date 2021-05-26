@@ -1,0 +1,83 @@
+nav{
+    width: 95%;
+    height: 10vh;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 2.5%;
+    z-index: 3;
+    h1{
+        font-family: 'Plaster', cursive;
+        font-size: 36px;
+        color: #E5E5E5;
+    }
+}
+
+.menu{
+    width: 6%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #E5E5E5;
+    font-family: 'Baron Neue';
+    cursor: pointer;
+    
+    p{
+        font-size: 15px;
+        
+    }
+    i{
+        font-size: 24px;
+    }
+}
+
+.menu-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100vh;
+    width: 100%;
+    padding-left: 2%;
+    background: #151617f8;
+    position:fixed;
+    top: 0;
+    z-index: -1;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease-in-out;
+    
+    a{
+        font-size: 48px;
+        text-decoration: none;
+        color:#E5E5E5;
+        font-family: 'Baron Neue';
+    }
+    p{
+        font-family: 'Baron Neue';
+        color: #e5e5e5;
+    }
+    i{
+        color: #e5e5e5;
+        font-size: 30px;
+        position: absolute;
+        top: 3%;
+        right: 5%;
+        cursor: pointer;
+    }
+    a:hover,i:hover{
+        color: #988345;
+    }
+
+}
+
+.show-menu{
+    opacity: 1;
+    z-index: 4;
+    pointer-events: all;
+}
+
+/* ------------ nav bar end ---------------*/

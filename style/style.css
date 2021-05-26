@@ -12,6 +12,11 @@ html {
   src: url("./fonts/Baron Neue Bold.ttf");
 }
 
+body {
+  background: -webkit-gradient(linear, left top, right top, from(#101011), color-stop(50%, #101011), color-stop(50%, #151617), to(#151617));
+  background: linear-gradient(to right, #101011 0%, #101011 50%, #151617 50%, #151617 100%);
+}
+
 /* ---------- loader ------------*/
 .loader {
   position: fixed;
@@ -50,14 +55,19 @@ html {
   }
 }
 
-/* -------------- loader end ----------- */
-/* -------------- background ------------*/
-body {
-  background: -webkit-gradient(linear, left top, right top, from(#101011), color-stop(50%, #101011), color-stop(50%, #151617), to(#151617));
-  background: linear-gradient(to right, #101011 0%, #101011 50%, #151617 50%, #151617 100%);
+.main-container {
+  height: 90vh;
+  width: 100%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 10px;
 }
 
-/*--------------- nav bar start ---------*/
+/* -------------- loader end ----------- */
 nav {
   width: 95%;
   height: 10vh;
@@ -163,18 +173,6 @@ nav h1 {
 }
 
 /* ------------ nav bar end ---------------*/
-.main-container {
-  height: 90vh;
-  width: 100%;
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin-bottom: 10px;
-}
-
 .hero-text-container {
   margin: auto;
   width: 95%;
@@ -360,6 +358,159 @@ nav h1 {
   hr {
     width: 10%;
     height: 3px;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+.about-container {
+  width: 80%;
+  margin: auto;
+  font-family: 'Baron Neue';
+}
+
+.upper-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  height: 25vh;
+  width: 100%;
+}
+
+.upper-container h1 {
+  font-size: 3em;
+  color: #e5e5e5;
+}
+
+.upper-container h3 {
+  font-size: 1.5em;
+  color: #e5e5e5;
+}
+
+.upper-container a {
+  font-size: 1em;
+  color: #988345;
+}
+
+.upper-container p {
+  font-size: 1em;
+  color: #e5e5e5;
+}
+
+.social-media {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  height: 30vh;
+  width: 100%;
+  margin-top: 10vh;
+}
+
+.row {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100%;
+}
+
+.social-links {
+  height: 98%;
+  width: 49%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.social-links i {
+  color: #e5e5e5;
+  font-size: 1.5em;
+  padding-right: 10px;
+}
+
+.social-links a {
+  color: #988345;
+  font-size: 1em;
+  padding-right: 10px;
+}
+
+@media screen and (max-width: 450px) {
+  .about-container {
+    width: 95%;
+  }
+  .upper-container h1 {
+    font-size: 2em;
+  }
+  .upper-container h3 {
+    font-size: 1.5em;
+    color: #e5e5e5;
+  }
+  .upper-container a {
+    font-size: 0.8em;
+    color: #988345;
+  }
+  .upper-container p {
+    font-size: 0.8em;
+    color: #e5e5e5;
+  }
+  .row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .social-links {
+    width: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .social-links i {
+    color: #e5e5e5;
+    font-size: 1em;
+    padding-right: 10px;
+  }
+  .social-links a {
+    color: #988345;
+    font-size: 0.8em;
+    padding-right: 10px;
   }
 }
 /*# sourceMappingURL=style.css.map */

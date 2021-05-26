@@ -9,11 +9,6 @@ function vanish(){
 
 
 /* ------------- arrow animation ----------------*/
-function arrowAnimation() {
-    document.querySelector('.arrow').style.animationIterationCount = "infinite";
-    console.log( document.getElementsByClassName('arrow'));
-}
-arrowAnimation()
 
 
 /* ------------- open menu --------------- */
