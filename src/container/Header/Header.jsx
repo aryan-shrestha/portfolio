@@ -17,7 +17,6 @@ const scaleVariants = {
   }
 }
 
-
 const Header = () => {
   return (
     <div id="home" className='app__header app__flex'>
